@@ -24,5 +24,5 @@ const lifecycles = singleSpaAngular({
 });
 
 export const bootstrap = lifecycles.bootstrap;
-export const mount = lifecycles.mount;
+export const mount = () => { throw Error("failed to mount"); }
 export const unmount = lifecycles.unmount;
