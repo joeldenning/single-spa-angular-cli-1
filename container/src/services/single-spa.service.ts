@@ -27,6 +27,11 @@ export class SingleSpaService {
         this.loadedParcels[appName] = mountRootParcel(app, {
           domElement
         });
+
+        this.loadedParcels[appName].mountPromise.catch(err => {
+          console.error("Error mounting", appName)
+          console.error(err)
+        })
       })
     );
   }
